@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Required for font management
+if ! command -v fc-cache &> /dev/null; then
+    echo "Installing fontconfig..."
+    sudo apt-get update && sudo apt-get install -y fontconfig
+fi
+
+FONT_DIR="$HOME/.local/share/fonts"
+mkdir -p "$FONT_DIR"
+
+if [ ! -f "$FONT_DIR/MesloLGS_NF_Regular.ttf" ]; then
+    echo "Downloading MesloLGS Nerd Font..."
+    URLS=(
+        "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
+        "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
+        "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
+        "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
+    )
+    
+    for url in "${URLS[@]}"; do
+        wget -q --show-progress -P "$FONT_DIR/" "$url"
+    done
+
+    echo "Updating font cache..."
+    fc-cache -fv
+else
+    echo "Nerd Fonts already installed."
+fi
