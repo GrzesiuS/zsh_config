@@ -1,0 +1,29 @@
+# Portable PATH
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+
+export ZSH="$HOME/.oh-my-zsh"
+
+# Get API key securely from Bitwarden
+# Assuming item name in Bitwarden is 'Gemini API'
+export GEMINI_API_KEY="{{ (bitwarden "item" "Gemini API").login.password }}"
+export ZSH_AI_PROVIDER="gemini"
+
+# Plugins from your config (standard OMZ + external ones)
+plugins=(
+    chezmoi git aliases command-not-found cp extract brew 
+    zsh-autosuggestions fast-syntax-highlighting you-should-use zoxide zsh-ai
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# Rest of your config...
+export EDITOR='micro'
+export FPATH="$HOME/bin:$FPATH"
+
+# Function for sync
+czsync() {
+    if [ -z "$BW_SESSION" ]; then
+        export BW_SESSION=$(bw unlock --raw)
+    fi
+    [ -n "$BW_SESSION" ] && chezmoi update --apply
+}

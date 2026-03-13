@@ -1,0 +1,60 @@
+# Oh My Zsh core
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+# Third-party Zsh Plugins
+[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+
+[".oh-my-zsh/custom/plugins/fast-syntax-highlighting"]
+    type = "git-repo"
+    url = "https://github.com/zdharma-continuum/fast-syntax-highlighting.git"
+
+[".oh-my-zsh/custom/plugins/you-should-use"]
+    type = "git-repo"
+    url = "https://github.com/MichaelAquilina/zsh-you-should-use.git"
+
+[".oh-my-zsh/custom/plugins/zsh-ai"]
+    type = "git-repo"
+    url = "https://github.com/valentindotg/zsh-ai.git"
+
+# Static Binaries (Linux x86_64 examples)
+# These will be placed in ~/bin/ which is already in your $PATH
+
+["bin/eza"]
+    type = "archive-file"
+    url = "https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz"
+    path = "./eza"
+
+["bin/micro"]
+    type = "archive-file"
+    url = "https://github.com/zyedidia/micro/releases/download/v2.0.14/micro-2.0.14-linux64-static.tar.gz"
+    path = "micro-2.0.14/micro"
+    stripComponents = 1
+
+["bin/bat"]
+    type = "archive-file"
+    url = "https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-v0.24.0-x86_64-unknown-linux-musl.tar.gz"
+    path = "bat-v0.24.0-x86_64-unknown-linux-musl/bat"
+    stripComponents = 1
+
+["bin/oh-my-posh"]
+    type = "file"
+    url = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64"
+    executable = true
+
+["bin/zoxide"]
+    type = "archive-file"
+    url = "https://github.com/ajeetdsouza/zoxide/releases/latest/download/zoxide-x86_64-unknown-linux-musl.tar.gz"
+    path = "zoxide"
+
+["bin/fastfetch"]
+    type = "archive-file"
+    url = "https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.tar.gz"
+    path = "usr/bin/fastfetch"
+    stripComponents = 1
