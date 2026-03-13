@@ -1,7 +1,8 @@
 #!/bin/bash
-# Change default shell to zsh if not already set
-
-zshPath=$(which zsh)
-if [ "$SHELL" != "$zshPath" ]; then
-    sudo chsh -s "$zshPath" "$USER"
+ZSH_PATH=$(which zsh)
+if [ "$SHELL" != "$ZSH_PATH" ]; then
+    echo "Changing shell to zsh for root..."
+    chsh -s "$ZSH_PATH"
+else
+    echo "Zsh is already the default shell."
 fi

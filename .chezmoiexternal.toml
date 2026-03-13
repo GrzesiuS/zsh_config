@@ -2,7 +2,6 @@
 [".oh-my-zsh"]
     type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
-    exact = true
     stripComponents = 1
     refreshPeriod = "168h"
 
@@ -52,11 +51,17 @@
 
 ["bin/zoxide"]
     type = "archive-file"
-    url = "https://github.com/ajeetdsouza/zoxide/releases/latest/download/zoxide-x86_64-unknown-linux-musl.tar.gz"
+    url = "https://github.com/ajeetdsouza/zoxide/releases/download/v0.9.6/zoxide-0.9.6-x86_64-unknown-linux-musl.tar.gz"
     path = "zoxide"
-
+    
 ["bin/fastfetch"]
     type = "archive-file"
     url = "https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.tar.gz"
     path = "usr/bin/fastfetch"
     stripComponents = 1
+
+["bin/bw"]
+    type = "archive-file"
+    url = "https://vault.bitwarden.com/download/?app=cli&platform=linux"
+    path = "bw"
+    executable = true
