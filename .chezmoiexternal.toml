@@ -34,13 +34,15 @@
 ["bin/micro"]
     type = "archive-file"
     url = "https://github.com/zyedidia/micro/releases/download/v2.0.14/micro-2.0.14-linux64-static.tar.gz"
-    path = "micro-2.0.14/micro"
+    # Tutaj również - po wejściu do folderu micro-2.0.14, binarka nazywa się po prostu 'micro'
+    path = "micro"
     stripComponents = 1
 
 ["bin/bat"]
     type = "archive-file"
     url = "https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-v0.24.0-x86_64-unknown-linux-musl.tar.gz"
-    path = "bat-v0.24.0-x86_64-unknown-linux-musl/bat"
+    # Po usunięciu 1 poziomu (stripComponents), plik 'bat' jest w katalogu głównym
+    path = "bat"
     stripComponents = 1
 
 ["bin/oh-my-posh"]
