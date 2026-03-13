@@ -60,8 +60,13 @@
     path = "usr/bin/fastfetch"
     stripComponents = 1
 
-["bin/bw"]
+["bin/age"]
     type = "archive-file"
-    url = "https://vault.bitwarden.com/download/?app=cli&platform=linux"
-    path = "bw"
-    executable = true
+    url = "https://github.com/FiloSottile/age/releases/download/v1.2.1/age-v1.2.1-linux-amd64.tar.gz"
+    path = "age/age"
+
+["bin/age-keygen"]
+    type = "archive-file"
+    url = "https://github.com/FiloSottile/age/releases/download/v1.2.1/age-v1.2.1-linux-amd64.tar.gz"
+    path = "age/age-keygen"
+
