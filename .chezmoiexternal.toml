@@ -20,7 +20,7 @@
 
 [".oh-my-zsh/custom/plugins/zsh-ai"]
     type = "git-repo"
-    url = "https://github.com/Homa-Sadeghi/zsh-ai.git"
+    url = "https://github.com/matheusml/zsh-ai.git"
     
 # Static Binaries (Linux x86_64 examples)
 # These will be placed in ~/bin/ which is already in your $PATH
