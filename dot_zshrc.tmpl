@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Get API key securely from Bitwarden
 # Assuming item name in Bitwarden is 'Gemini API'
-export GEMINI_API_KEY="{{ (include "encrypted_gemini_api_key.txt.age" | decrypt) | trim }}"
+export GEMINI_API_KEY="{{ (include "gemini_api_key.txt.asc" | decrypt) | trim }}"
 export ZSH_AI_PROVIDER="gemini"
 
 # Plugins from your config (standard OMZ + external ones)

@@ -1,8 +1,7 @@
-encryption = "age"
+encryption = "gpg"
 
-[age]
-    symmetric = true
-    # identity = "{{ .chezmoi.homeDir }}/.config/chezmoi/key.txt"
+[gpg]
+    args = ["--quiet"]
 
 [data]
     email = "grzesius2@gmail.com"
