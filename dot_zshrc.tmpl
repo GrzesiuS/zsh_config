@@ -1,6 +1,7 @@
 # Portable PATH
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
+ZSH_DISABLE_COMPFIX="true"
 export ZSH="$HOME/.oh-my-zsh"
 
 export GEMINI_API_KEY="{{ (include "gemini_api_key.txt.asc" | decrypt) | trim }}"
