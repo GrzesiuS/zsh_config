@@ -1,0 +1,6 @@
+#!/bin/bash
+# Install Oh My Zsh if not already present
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "Core Oh My Zsh missing. Installing..."
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
