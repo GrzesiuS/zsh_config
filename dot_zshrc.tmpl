@@ -23,10 +23,4 @@ if [ -f "$HOME/.oh_my_posh.json" ]; then
     eval "$(oh-my-posh init zsh --config ~/.oh_my_posh.json)"
 fi
 
-# Function for sync
-czsync() {
-    if [ -z "$BW_SESSION" ]; then
-        export BW_SESSION=$(bw unlock --raw)
-    fi
-    [ -n "$BW_SESSION" ] && chezmoi update --apply
-}
+alias edit=micro
