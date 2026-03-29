@@ -10,7 +10,7 @@ run_cmd() {
 }
 
 {{ if eq .chezmoi.os "linux" -}}
-packages="curl git zsh"
+packages="curl git zsh gnupg"
 
 if command -v apt-get >/dev/null 2>&1; then
     run_cmd apt-get update
